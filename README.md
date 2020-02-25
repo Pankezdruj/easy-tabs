@@ -1,4 +1,4 @@
-h1 Easy to implement JavaScript tabs
+# Easy to implement JavaScript tabs
 =====================
 Instructions:
 1. tabClass - Class of the tabs
