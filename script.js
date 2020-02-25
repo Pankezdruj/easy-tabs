@@ -1,6 +1,7 @@
 
 let tabClass = 'info-tabcontent',
-    btnsWrapperClass = 
+    btnsWrapperClass = 'info-header',
+    tabsToggleBtnsClass = 'info-header-tab';
 function changeTab(num, tabs){
     for (let i = 0; i < tabs.length; i++){
         if (i == num) {
@@ -13,15 +14,15 @@ function changeTab(num, tabs){
         }
     }
 }
-let tabs = document.getElementsByClassName('info-tabcontent'),
-    btnsWrapper = document.getElementsByClassName('info-header')[0],
-    tabsToggleBtns = btnsWrapper.getElementsByClassName('info-header-tab');
+let tabs = document.getElementsByClassName(tabClass),
+    btnsWrapper = document.getElementsByClassName(btnsWrapperClass)[0],
+    tabsToggleBtns = btnsWrapper.getElementsByClassName(tabsToggleBtnsClass);
 
 window.addEventListener('DOMContentLoaded', function(){
     'use strict';
     changeTab(0, tabs);
     btnsWrapper.addEventListener('click', function(event){
-        if (event.target && event.target.classList.contains('info-header-tab')) {
+        if (event.target && event.target.classList.contains(tabsToggleBtnsClass)) {
             for (let i = 0; i < tabsToggleBtns.length; i++){
                 if (event.target == tabsToggleBtns[i]){
                     changeTab(i, tabs);
